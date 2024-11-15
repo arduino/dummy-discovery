@@ -94,7 +94,7 @@ jobs:
 
       - name: Send unit tests coverage to Codecov
         if: runner.os == 'Linux' && github.repository == 'arduino/pluggable-discovery-protocol-handler'
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           # A token is used to avoid intermittent spurious job failures caused by rate limiting.
           token: d2497f03-291d-4e0c-9d31-d94614ed7c16
@@ -104,7 +104,7 @@ jobs:
 
       - name: Send unit tests coverage to Codecov (run from a fork)
         if: runner.os == 'Linux' && github.repository != 'arduino/pluggable-discovery-protocol-handler'
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           # use repository variable CODECOV_TOKEN if running from a fork.
           # codecov/codecov-action does unauthenticated upload if empty string is passed via the `token` input.
